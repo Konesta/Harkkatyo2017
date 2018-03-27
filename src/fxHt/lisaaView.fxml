@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="396.0" prefWidth="259.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxHt.TapahtumaController">
+   <center>
+      <GridPane hgap="10.0" prefWidth="239.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nimi" />
+            <TextField fx:id="textNimi" prefHeight="25.0" prefWidth="195.0" text="Uusi kahvinkeitin" GridPane.columnIndex="1" />
+            <Label text="Summa" GridPane.rowIndex="1" />
+            <TextField prefHeight="25.0" prefWidth="195.0" text="-80,00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Paikka" GridPane.rowIndex="2" />
+            <TextField prefHeight="25.0" prefWidth="195.0" text="Clas Ohlson" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Aika" GridPane.rowIndex="3" />
+            <TextField prefHeight="25.0" prefWidth="195.0" text="15.02.2017" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Lisätiedot" GridPane.rowIndex="4" />
+            <TextField prefHeight="25.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <top>
+      <Label text="Lisää tapahtuma:" BorderPane.alignment="CENTER_LEFT">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <HBox prefHeight="90.0" prefWidth="262.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="90.0" prefWidth="259.0">
+               <left>
+                  <Button mnemonicParsing="false" onAction="#handlePeruuta" text="Peruuta" BorderPane.alignment="BOTTOM_CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" left="70.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </left>
+               <right>
+                  <Button mnemonicParsing="false" onAction="#handleTallenna" text="Tallenna" BorderPane.alignment="BOTTOM_CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" left="40.0" right="20.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </right>
+               <top>
+                  <CheckBox mnemonicParsing="false" text="Toistuva tapahtuma?" BorderPane.alignment="TOP_LEFT">
+                     <BorderPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </BorderPane.margin>
+                  </CheckBox>
+               </top>
+            </BorderPane>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
